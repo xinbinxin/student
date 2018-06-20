@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <!-- 最新版本的 Bootstrap 核心 jquery 文件 -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新版本的 Bootstrap 核心 字体库 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Home</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </nav>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">学生列表</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>班级
+                            <small><a href="/">全部</a></small>
+                        </th>
+                        <th>查看</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php  foreach( $data as $v) : ?>
+                    <tr>
+                        <td><?php echo $v['sid']?></td>
+                        <td><?php echo $v['username']?></td>
+                        <td><?php echo $v['sex']?></td>
+                        <td><a href="?s=index/index/index&gid=<?php echo $v['gid']?>"><?php echo $v['name']?></a></td>
+                        <td><a href="?s=index/index/show&id=<?php echo $v['sid']?>">查看详细资料</a></td>
+                    </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <a href="/admin" class="btn btn-warning">查看后台</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+{
+    "name": "xinbinxin/student",
+    "description": "php基础开发的一个学生管理系统",
+    "type": "project",
+    "keywords": [
+        "面向对象",
+        "实战",
+        "数据库操作"
+    ],
+    "homepage": "http://www.xinbinxin.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "张龙",
+            "email": "2859913655@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "filp/whoops": "^2.1",
+        "gregwar/captcha": "^1.1"
+    },
+    "autoload": {
+        "files":[
+            "hou/core/helper.php"
+        ],
+        "psr-4":{
+            "hou\\":"hou\\",
+            "app\\":"app",
+            "system\\":"system\\"
+        }
+    }
+}
