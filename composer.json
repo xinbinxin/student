@@ -1,7 +1,6 @@
 {
     "name": "xinbinxin/student",
     "description": "php基础开发的一个学生管理系统",
-    "type": "project",
     "keywords": [
         "面向对象",
         "实战",
